@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="main/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div id="app">
+        <button class="btn btn--centered" v-bind:style="buttonStyle">
+        Otwórz
+      </button>
+        <div class="modal" v-bind:style="modalStyle">
+            <div class="modal__window">
+                <h2 class="window__header">Nagłówek</h2>
+                <p class="window__content">Zawartość</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

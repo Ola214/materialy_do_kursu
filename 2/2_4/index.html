@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kurs VueJS</title>
+    <style>
+        #app {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .circle {
+            width: 200px;
+            height: 200px;
+            margin: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.7s;
+            border-radius: 50%;
+            background: blue;
+        }
+        
+        .small .circle {
+            height: 100px;
+            width: 100px;
+        }
+        
+        h2 {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+        
+        .roundedCorners {
+            border-radius: 50%;
+        }
+        
+        .red {
+            background: red;
+        }
+        
+        .yellow {
+            background: yellow;
+        }
+        
+        .circle .small {
+            width: 1000px;
+            height: 100px;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h2>X: {{x}}, Y: {{y}}</h2>
+        <!-- <div class="circle" v-on:click="changeMyColor"></div>
+        <div class="circle" v-on:mouseover="changeMyColor($event, true)" v-on:mouseout="changeMyColor($event, false)"></div>
+        <div class="circle" v-on:mousemove="updateMouseXY"></div> -->
+        <div class="circle" v-on:mousemove="updateMouseXY">
+            <div class="circle small" v-on:mousemove.stop></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

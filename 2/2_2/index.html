@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kurs VueJS</title>
+</head>
+
+<body>
+    <div id="app">
+        <div v-html='rawHtml'></div> <br> Nowe imię: <input type="text" v-on:input="changeName" />
+        <h1>Hello {{firstName}} {{lastName}}!</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
