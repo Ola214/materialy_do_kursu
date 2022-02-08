@@ -11,13 +11,13 @@
 
 <body>
     <div id="app">
-        <button class="btn btn--centered" v-bind:style="buttonStyle">
+        <button class="btn btn--centered" v-bind:style="buttonStyle" v-on:click="openModal">
         Otwórz
       </button>
-        <div class="modal" v-bind:style="modalStyle">
-            <div class="modal__window">
-                <h2 class="window__header">Nagłówek</h2>
-                <p class="window__content">Zawartość</p>
+        <div class="modal" v-bind:style="modalStyle" v-on:click="hideModal">
+            <div class="modal__window" v-on:click.stop>
+                <h2 class="window__header">{{header}}</h2>
+                <p class="window__content" v-html="content"></p>
             </div>
         </div>
     </div>
