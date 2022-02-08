@@ -7,7 +7,8 @@
 
 <body>
     <div id="app">
-        Imie: <input type="text" v-model="firstName" /><br /> Nazwisko: <input type="text" v-model="lastName" /><br /> Imie i nazwisko : <input type="text" v-model="fullName" /><br /> Imię i nazwisko: {{fullName}}
+        <button @click="loadUsers">Wczytaj użytkowników</button>
+        <hr> {{status}}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>

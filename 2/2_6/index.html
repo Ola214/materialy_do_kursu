@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kurs VueJS</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="number" :value="inputValue" @input="inputValue = $event.target.value" /> {{ 'Kwadrat liczby ' + inputValue + ' jest' }} {{ (inputValue*inputValue)>100 ? 'większy od 100' : 'mniejszy bądź równy 100' }}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
