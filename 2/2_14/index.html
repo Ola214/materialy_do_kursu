@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kurs VueJS</title>
+</head>
+
+<body>
+    <div id="app">
+        <div v-if="showFirst">V-if górą!</div>
+        <div v-show="!showFirst">V-show górą!</div>
+        <button @click="showFirst = !showFirst">Zmień</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -55,6 +55,18 @@ new Vue({
       }
     },
     computed:{
-      
+      lessonsEnd: function() {
+        return this.lessonsStart.map(function(v){
+          // 7:10
+          var times = v.split(':').map(Number);
+          times[1] += 45;
+          if(times[1] >= 60){
+            times[0]++;
+            times[1] %= 60;
+          }
+
+          return times.join(':');
+        });
+      }
     }
   });

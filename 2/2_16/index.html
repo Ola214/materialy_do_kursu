@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,20 +8,27 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <div id="app">
         <div class="schedule">
             <table class="schedule__hours">
-                <tr><th>Godziny lekcji</th></tr>
                 <tr>
-                    <td>7:10 - 7:55</td>
+                    <th>Godziny lekcji</th>
+                </tr>
+                <tr v-for="(start, index) in lessonsStart">
+                    <td>{{start}} - {{lessonsEnd[index]}}</td>
                 </tr>
             </table>
-            <table class="schedule__day">
-                <tr><th>Poniedziałek</th></tr>
-                <tr><td>- - -(brak lekcji)</td></tr>
+            <table class="schedule__day" v-for="(value, key) in schedule">
                 <tr>
-                    <td>Matematyka</td>
+                    <th>{{key}}</th>
+                </tr>
+                <tr v-for="i in value.startsAt">
+                    <td>- - -</td>
+                </tr>
+                <tr v-for="lesson in value.lessons">
+                    <td>{{lesson}}</td>
                 </tr>
             </table>
 
@@ -29,4 +37,5 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

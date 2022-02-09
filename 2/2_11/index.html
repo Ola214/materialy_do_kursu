@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kurs VueJS</title>
+    <style>
+        .colorRed {
+            color: red;
+        }
+        
+        .background-cyan {
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="checkbox" v-model="fontOrBackground" /> Font or background?<br>
+        <div :class="[fontOrBackground ? colorRed : 'background-cyan']">
+            Hej!
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
