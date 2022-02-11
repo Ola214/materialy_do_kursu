@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <cmp-xcv />
-    <CmpXcv />
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import RoundedButton from "./components/RoundedButton.vue";
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    CmpXcv: RoundedButton,
-  },
-};
+    HelloWorld
+  }
+}
 </script>
 
 <style>
