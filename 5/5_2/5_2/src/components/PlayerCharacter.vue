@@ -1,9 +1,10 @@
 <template>
   <div class="panel panel-default">
     <div class="panel-heading">
-      <PlayerCharacterName />
+      <PlayerCharacterName :myName="playerName" :pseudo="'the Famous'" />
     </div>
     <div class="panel-body">
+      Imię gracza: <input type="text" v-model="playerName" />
       <PlayerCharacterHealthbar />
     </div>
   </div>
@@ -16,6 +17,9 @@ export default {
     PlayerCharacterName,
     PlayerCharacterHealthbar,
   },
+  data: () => ({
+    playerName: "Sir Dan",
+  }),
 };
 </script>
 <style scoped>
@@ -23,5 +27,6 @@ export default {
   -webkit-box-shadow: 0px 0px 48px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 48px -7px rgba(0, 0, 0, 0.75);
   -box-shadow: 0px 0px 48px -7px rgba(0, 0, 0, 0.75);
+  margin: 40px;
 }
 </style>
