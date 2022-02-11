@@ -1,7 +1,11 @@
 <template>
   <div class="panel panel-default">
     <div class="panel-heading">
-      <PlayerCharacterName :myName="playerName" :pseudo="'the Famous'" />
+      <PlayerCharacterName
+        :myName="playerName"
+        :pseudo="'the Famous'"
+        :changeFunc="changeName"
+      />
     </div>
     <div class="panel-body">
       Imię gracza: <input type="text" v-model="playerName" />
@@ -20,6 +24,11 @@ export default {
   data: () => ({
     playerName: "Sir Dan",
   }),
+  methods: {
+    changeName(newName) {
+      this.playerName = newName;
+    },
+  },
 };
 </script>
 <style scoped>

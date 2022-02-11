@@ -1,5 +1,8 @@
 <template>
-  <h3 class="panel-title">{{ myName }} {{ pseudo }}</h3>
+  <h3 class="panel-title">
+    {{ myName }} {{ pseudo }}
+    <input type="text" :value="myName" @change="changeMyName" />
+  </h3>
 </template>
 <script>
 export default {
@@ -11,6 +14,13 @@ export default {
       validator(value) {
         return value.toLowerCase() === value;
       },
+    },
+    changeFunc: Function,
+  },
+  methods: {
+    changeMyName(event) {
+      //this.$emit('changedName', event.target.value);
+      this.changeFunc(event.target.value);
     },
   },
 };
